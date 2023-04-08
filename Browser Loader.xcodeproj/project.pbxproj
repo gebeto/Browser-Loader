@@ -20,6 +20,7 @@
 		AD665C8B29DDE04B0064ECBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD665C8E29DDE04B0064ECBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD665C9029DDE04B0064ECBE /* Browser_Loader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Browser_Loader.entitlements; sourceTree = "<group>"; };
+		AD665C9629DDE0AC0064ECBE /* Browser-Loader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Browser-Loader-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		AD665C8629DDE0480064ECBE /* Browser Loader */ = {
 			isa = PBXGroup;
 			children = (
+				AD665C9629DDE0AC0064ECBE /* Browser-Loader-Info.plist */,
 				AD665C8729DDE0480064ECBE /* Browser_LoaderApp.swift */,
 				AD665C8929DDE0480064ECBE /* ContentView.swift */,
 				AD665C8B29DDE04B0064ECBE /* Assets.xcassets */,
@@ -272,6 +274,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Browser Loader/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Browser-Loader-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +300,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Browser Loader/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Browser-Loader-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
