@@ -10,7 +10,48 @@ import SwiftUI
 import Cocoa
 
 
+struct PopoverView: View {
+    var body: some View {
+        VStack(alignment: .center, spacing: 8, content: {
+            Text("Browser Loader")
+            
+            HStack(alignment: .top, spacing: 0) {
+                Button("Exit") {
+                    exit(0)
+                }
+            }
+        }).padding()
+    }
+}
+
+
 class AppDelegate: NSResponder, NSApplicationDelegate {
+    private var popover: NSPopover!
+    private var statusItem: NSStatusItem!
+    
+    @objc func togglePopover() {
+        if let button = statusItem.button {
+            if popover.isShown {
+                self.popover.performClose(nil)
+            } else {
+                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            }
+        }
+    }
+    
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        if let statusButtons = statusItem.button {
+            statusButtons.image = NSImage(named: NSImage.Name("StatusBarIcon"))
+            statusButtons.action = #selector(togglePopover)
+        }
+        
+        self.popover = NSPopover()
+        self.popover.contentSize = NSSize(width: 200, height: 100)
+        self.popover.behavior = .transient
+        self.popover.contentViewController = NSHostingController(rootView: PopoverView())
+    }
+    
     func openUrl(bundleId: String, urls: [URL]) {
         let browserURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: bundleId)!
         

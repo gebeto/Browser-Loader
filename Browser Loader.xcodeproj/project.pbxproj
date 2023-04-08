@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD665C8829DDE0480064ECBE /* Browser_LoaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD665C8729DDE0480064ECBE /* Browser_LoaderApp.swift */; };
-		AD665C8A29DDE0480064ECBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD665C8929DDE0480064ECBE /* ContentView.swift */; };
 		AD665C8C29DDE04B0064ECBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD665C8B29DDE04B0064ECBE /* Assets.xcassets */; };
 		AD665C8F29DDE04B0064ECBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD665C8E29DDE04B0064ECBE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		AD665C8429DDE0480064ECBE /* Browser Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Browser Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD665C8729DDE0480064ECBE /* Browser_LoaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser_LoaderApp.swift; sourceTree = "<group>"; };
-		AD665C8929DDE0480064ECBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD665C8B29DDE04B0064ECBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD665C8E29DDE04B0064ECBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD665C9029DDE04B0064ECBE /* Browser_Loader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Browser_Loader.entitlements; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			children = (
 				AD665C9629DDE0AC0064ECBE /* Browser-Loader-Info.plist */,
 				AD665C8729DDE0480064ECBE /* Browser_LoaderApp.swift */,
-				AD665C8929DDE0480064ECBE /* ContentView.swift */,
 				AD665C8B29DDE04B0064ECBE /* Assets.xcassets */,
 				AD665C9029DDE04B0064ECBE /* Browser_Loader.entitlements */,
 				AD665C8D29DDE04B0064ECBE /* Preview Content */,
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD665C8A29DDE0480064ECBE /* ContentView.swift in Sources */,
 				AD665C8829DDE0480064ECBE /* Browser_LoaderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
