@@ -1,4 +1,4 @@
-# Browser-Loader
+# Browser Loader
 
 <img width="128px" src="./Browser Loader/Assets.xcassets/AppIcon.appiconset/Icon_128.png" />
 
