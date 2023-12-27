@@ -8,6 +8,27 @@
 import Foundation
 import SwiftUI
 import Cocoa
+import UniformTypeIdentifiers
+import AppKit
+
+
+enum Browser: String {
+    case Arc = "company.thebrowser.browser"
+    case Blisk = "org.blisk.blisk"
+    case Brave = "com.brave.browser"
+    case BraveBeta = "com.brave.browser.beta"
+    case BraveDev = "com.brave.browser.dev"
+    case Chrome = "com.google.chrome"
+    case ChromeCanary = "com.google.chrome.canary"
+    case Edge = "com.microsoft.edgemac"
+    case EdgeBeta = "com.microsoft.edgemac.beta"
+    case Firefox = "org.mozilla.firefox"
+    case FirefoxDeveloperEdition = "org.mozilla.firefoxdeveloperedition"
+    case Opera = "com.operasoftware.opera"
+    case Vivaldi = "com.vivaldi.vivaldi"
+    case Safari = "com.apple.safari"
+    case Wavebox = "com.bookry.wavebox"
+}
 
 
 struct PopoverView: View {
@@ -60,18 +81,19 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
     
     func application(_ application: NSApplication, open urls: [URL]) {
         let browsers = [
-            "com.apple.Safari",
-            "com.google.Chrome",
-            "org.mozilla.firefox"
+            Browser.Safari,
+            Browser.Chrome,
+            Browser.Firefox,
+            Browser.Arc,
         ]
         let defaultBrowser = browsers[0]
         for browser in browsers {
-            if NSWorkspace.shared.runningApplications.contains(where: { $0.bundleIdentifier == browser }) {
-                self.openUrl(bundleId: browser, urls: urls)
+            if NSWorkspace.shared.runningApplications.contains(where: { $0.bundleIdentifier?.lowercased() == browser.rawValue }) {
+                self.openUrl(bundleId: browser.rawValue, urls: urls)
                 return
             }
         }
-        self.openUrl(bundleId: defaultBrowser, urls: urls)
+        self.openUrl(bundleId: defaultBrowser.rawValue, urls: urls)
     }
 }
 
@@ -86,4 +108,3 @@ struct MyApp: App {
         }
     }
 }
-
